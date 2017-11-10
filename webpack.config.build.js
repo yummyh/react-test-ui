@@ -31,18 +31,7 @@ module.exports = {
             use: "file-loader?name=./fonts/[name].[ext]"
         }]
     },
-    performance: {
-        hints: false
-    },
-}
-
-if (process.env.NODE_ENV === 'production') {
-    module.exports.plugins = (module.exports.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
+    plugins: [
         new webpack.LoaderOptionsPlugin({
             minimize: false
         }),
@@ -50,6 +39,6 @@ if (process.env.NODE_ENV === 'production') {
             filename: "Drawer.css",
             disable: false,
             allChunks: true
-        }),
-    ])
+        })
+    ]
 }
