@@ -6,11 +6,11 @@ const Nyan = require('nyan-progress-webpack-plugin');
 // const openBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-    entry: './examples/src/index.js',
+    entry: './examples/lib/index.js',
     output: {
         path: './examples/lib',
         filename: 'index.js',
-        publicPath: "http://127.0.0.1:9010/lib"
+        //  publicPath: "http://127.0.0.1:9010/lib"
     },
     module: {
         loaders: [{

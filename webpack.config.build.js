@@ -18,17 +18,17 @@ module.exports = {
     module: {
         rules: [{
             test: /\.js$/,
-            loader: 'babel-loader',
+            use: 'babel-loader',
             exclude: /node_modules/
         }, {
             test: /\.(less|css)?$/,
-            loader: ExtractTextPlugin.extract({
-                fallbackLoader: "style-loader",
-                loader: 'css-loader!less-loader'
+            use: ExtractTextPlugin.extract({
+                fallback: "style-loader",
+                use: 'css-loader!less-loader'
             })
         }, {
             test: /\.(svg|ttf|eot|svg|woff(\(?2\)?)?)(\?[a-zA-Z_0-9.=&]*)?(#[a-zA-Z_0-9.=&]*)?$/,
-            loader: "file-loader?name=./fonts/[name].[ext]"
+            use: "file-loader?name=./fonts/[name].[ext]"
         }]
     },
     performance: {
@@ -38,7 +38,7 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#source-map'
+    module.exports.devtool = '#cheap-module-source-map'
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
             'process.env': {
