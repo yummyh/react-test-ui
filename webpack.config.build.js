@@ -9,8 +9,8 @@ function resolve(dir) {
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: 'react-drawer.min.js',
+        path: path.resolve(__dirname, './lib'),
+        filename: 'Drawer.js',
         library: 'React-Drawer',
         libraryTarget: 'umd',
         umdNamedDefine: true
@@ -34,28 +34,20 @@ module.exports = {
     performance: {
         hints: false
     },
-    devtool: '#source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#cheap-module-source-map'
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: '"production"'
             }
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
-            }
-        }),
         new webpack.LoaderOptionsPlugin({
-            minimize: true
+            minimize: false
         }),
         new ExtractTextPlugin({
-            filename: "react-drawer.min.css",
+            filename: "Drawer.css",
             disable: false,
             allChunks: true
         }),
