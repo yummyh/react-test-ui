@@ -17,8 +17,17 @@ module.exports = {
             exclude: /node_modules/,
             use: 'babel-loader'
         }, {
-            test: /\.(less|css)?$/,
-            loader: 'style-loader!css-loader!less-loader'
+            test: /\.(less|css)$/,
+            exclude: /node_modules/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'postcss-loader'
+            }, {
+                loader: 'less-loader',
+            }]
         }]
     },
     devServer: {
