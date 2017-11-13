@@ -24,7 +24,13 @@ module.exports = {
             test: /\.(less|css)?$/,
             use: ExtractTextPlugin.extract({
                 fallback: "style-loader",
-                use: 'css-loader!less-loader'
+                use: [{
+                    loader: 'css-loader'
+                }, {
+                    loader: 'postcss-loader'
+                }, {
+                    loader: 'less-loader'
+                }]
             })
         }, {
             test: /\.(svg|ttf|eot|svg|woff(\(?2\)?)?)(\?[a-zA-Z_0-9.=&]*)?(#[a-zA-Z_0-9.=&]*)?$/,
