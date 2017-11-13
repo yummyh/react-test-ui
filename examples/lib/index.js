@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {
     Drawer
 } from '../../src/index.js';
-
+import '../style/style.less'
 const Component = React.Component;
 
 class Main extends React.Component {
@@ -24,14 +24,14 @@ class Main extends React.Component {
     render() {
 
         return (
-            <div>
-                <span onClick={this.handleClick.bind(this, true)} >click here!</span>
+            <div className="example">
+                <span className="btn" onClick={this.handleClick.bind(this, true)} >click here!</span>
                 <Drawer style={{minHeight: '100%', width: '80%'}}
                         animation='slide'
                         maskAnimation={true}
                         changeVisible={this.handleClick.bind(this, false)}
                         visible={this.state.popupVisible} >
-                        <h1>this is a test</h1>
+                        <p className="ctn" >this is a example!</p>
                 </Drawer>
             </div>
         )

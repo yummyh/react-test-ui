@@ -1,9 +1,9 @@
-var webpack = require('webpack');
-var path = require('path');
-var Nyan = require('nyan-progress-webpack-plugin');
-var WebpackDevServer = require('webpack-dev-server');
-var WebpackDevMiddleware = require("webpack-dev-middleware");
-var openBrowserPlugin = require('open-browser-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const Nyan = require('nyan-progress-webpack-plugin');
+const WebpackDevServer = require('webpack-dev-server');
+const WebpackDevMiddleware = require("webpack-dev-middleware");
+const openBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     entry: './examples/lib/index.js',
