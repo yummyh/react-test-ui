@@ -33,7 +33,7 @@ module.exports = {
     devServer: {
         contentBase: "./examples",
         historyApiFallback: true,
-        inline: true,
+        inline: true
     },
     plugins: [
         new Nyan(),

@@ -31,13 +31,8 @@ class Drawer extends React.Component {
     // 关闭浮层
     handleModalClicked(tag, value) {
         document.body.classList.remove('drawer-open');
-        if (!!this.props.store) {
-            this.props.store.onPopupClick(false);
-        } else {
-            this.props.changeVisible(tag, value);
-        }
+        this.props.changeVisible(tag, value);
     }
-
 
     render() {
         let {
@@ -65,7 +60,6 @@ class Drawer extends React.Component {
 }
 
 Drawer.defaultProps = {
-    store: null,
     style: {}, //窗口样式
     visible: false, //是否关闭窗口
     maskStyle: {}, //蒙层样式
