@@ -2,7 +2,7 @@
   "name": "react-drawer",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/Index.js",
+  "main": "lib/Drawer.js",
   "scripts": {
     "build": "rimraf lib && webpack --config webpack.config.build.js --progress",
     "start": "webpack-dev-server --inline  --config webpack.config.dev.js ",

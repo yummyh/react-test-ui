@@ -9,9 +9,9 @@ class Drawer extends React.Component {
             document.body.classList.add('drawer-open');
         }
 
-/*        let mql = window.matchMedia('(orientation: portrait)');
-        this.handleOrientationChange(mql);
-        mql.addListener(this.handleOrientationChange);*/
+        /*        let mql = window.matchMedia('(orientation: portrait)');
+                this.handleOrientationChange(mql);
+                mql.addListener(this.handleOrientationChange);*/
     }
 
     /*    componentWillUnmount() {
