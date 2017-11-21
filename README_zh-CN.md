@@ -1,10 +1,10 @@
-## React-Drawer
+## rm-react-drawer
 react移动端侧滑栏组件
 
 ## 安装
 
 ```
-npm install react-drawer
+npm install rm-react-drawer
 
 ```
 
