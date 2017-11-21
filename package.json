@@ -1,6 +1,6 @@
 {
   "name": "react-drawer",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/Drawer.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --inline  --config webpack.config.dev.js ",
     "test": "mocha --color --require ignore-styles --require babel-core/register ./test/setup.js --recursive ./test/source",
     "test:watch": "npm test -- --watch",
-    "eslint": "eslint src"
+    "eslint": "eslint src",
+    "publish": "npm version patch && rimraf lib && webpack --config webpack.config.build.js --progress && npm publish"
   },
   "repository": {
     "type": "git",
