@@ -1,5 +1,5 @@
 {
-  "name": "react-drawer",
+  "name": "rm-react-drawer",
   "version": "0.1.1",
   "description": "",
   "main": "lib/Drawer.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WoolYang/React-Drawer"
+    "url": "https://github.com/WoolYang/rm-react-drawer"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "WoolYang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WoolYang/React-Drawer/issues"
+    "url": "https://github.com/WoolYang/rm-react-drawer/issues"
   },
-  "homepage": "https://github.com/WoolYang/React-Drawer#readme",
+  "homepage": "https://github.com/WoolYang/rm-react-drawer#readme",
   "dependencies": {
     "classnames": "^2.2.5"
   },
