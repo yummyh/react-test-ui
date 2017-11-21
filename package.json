@@ -9,7 +9,7 @@
     "test": "mocha --color --require ignore-styles --require babel-core/register ./test/setup.js --recursive ./test/source",
     "test:watch": "npm test -- --watch",
     "eslint": "eslint src",
-    "publish": "npm version patch && rimraf lib && webpack --config webpack.config.build.js --progress && npm publish"
+    "publish": "npm version patch &&  npm publish"
   },
   "repository": {
     "type": "git",
