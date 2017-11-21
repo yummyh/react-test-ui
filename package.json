@@ -1,6 +1,6 @@
 {
   "name": "rm-react-drawer",
-  "version": "0.1.11",
+  "version": "0.1.1",
   "description": "",
   "main": "lib/Drawer.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "test": "mocha --color --require ignore-styles --require babel-core/register ./test/setup.js --recursive ./test/source",
     "test:watch": "npm test -- --watch",
     "eslint": "eslint src",
-    "publish": "npm version patch &&  npm publish"
+    "pub": "npm version patch &&  npm publish"
   },
   "repository": {
     "type": "git",
