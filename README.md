@@ -1,1 +1,1 @@
-[中文API](./README_zh-CN.md)
+[中文](./README_zh-CN.md)
