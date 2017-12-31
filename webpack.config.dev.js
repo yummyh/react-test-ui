@@ -6,29 +6,33 @@ const WebpackDevMiddleware = require("webpack-dev-middleware");
 const openBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-    entry: './examples/lib/index.js',
+    entry: './examples/lib/test.js',
     output: {
         path: path.resolve(__dirname, 'examples/lib'),
         filename: 'index.js'
     },
     module: {
-        rules: [{
-            test: /\.js?$/,
-            exclude: /node_modules/,
-            use: 'babel-loader'
-        }, {
-            test: /\.(less|css)$/,
-            exclude: /node_modules/,
-            use: [{
-                loader: 'style-loader'
+        rules: [
+            {
+                test: /\.js?$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
             }, {
-                loader: 'css-loader'
-            }, {
-                loader: 'postcss-loader'
-            }, {
-                loader: 'less-loader'
-            }]
-        }]
+                test: /\.(less|css)$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    }, {
+                        loader: 'css-loader'
+                    }, {
+                        loader: 'postcss-loader'
+                    }, {
+                        loader: 'less-loader'
+                    }
+                ]
+            }
+        ]
     },
     devServer: {
         contentBase: "./examples",
@@ -36,10 +40,7 @@ module.exports = {
         inline: true
     },
     plugins: [
-        new Nyan(),
-        new webpack.HotModuleReplacementPlugin(),
-        new openBrowserPlugin({
-            url: 'http://localhost:8080'
-        })
+        new Nyan(), new webpack.HotModuleReplacementPlugin(),
+        new openBrowserPlugin({url: 'http://localhost:8080'})
     ]
 };

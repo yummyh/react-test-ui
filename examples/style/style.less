@@ -1,11 +1,49 @@
-.example{
-	text-align: center;
-	.btn{
-		padding: 10px;
-	    font-size: 80px;
-	    background: #ccc;
-	}
-	.ctn{
-		font-size: 80px;
-	}	
+.example {
+    text-align: center;
+    .btn {
+        padding: 10px;
+        font-size: 80px;
+        background: #ccc;
+    }
+    .ctn {
+        font-size: 80px;
+    }
+}
+
+div,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%
+}
+
+.m {
+    .m-header {
+        position: fixed;
+        background-color: #131212;
+        height: 3rem;
+        width: 100%;
+        color: #fff;
+        font-size: 1.5rem;
+        line-height: 3rem;
+        top: 0;
+    }
+    .m-continer {
+        margin-top: 3rem;
+        display: flex;
+        .m-sideBar {
+            flex: 0 0 300px;
+            background: #f5f5f5;
+        }
+        .m-context {
+            flex: 1;
+        }
+    }
 }
