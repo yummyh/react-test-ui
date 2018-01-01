@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/WoolYang/rm-react-drawer#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "classnames": "^2.2.5"
   },
   "devDependencies": {

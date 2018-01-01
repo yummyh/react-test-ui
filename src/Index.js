@@ -1,9 +1,5 @@
-/**
- * Created by Wool on 2017/11/10.
- */
+import Header from './Component/Header';
+import MenuItem from './Component/MenuItem';
+import SideBar from './Component/SideBar';
 
-import Drawer from './Component/Drawer';
-
-export {
-	Drawer
-};
+export {Header, MenuItem, SideBar};
